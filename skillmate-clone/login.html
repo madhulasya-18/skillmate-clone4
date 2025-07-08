@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Skillmate.AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+      background-size: 200% 200%;
+      animation: bgFlow 10s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    @keyframes bgFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .runner {
+      position: absolute;
+      top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      animation: moveRunner 12s linear infinite;
+    }
+
+    @keyframes moveRunner {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100vw); }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+      width: 320px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #4a00e0;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8e2de2;
+    }
+
+    #error {
+      margin-top: 15px;
+      overflow: hidden;
+      height: 24px;
+      color: red;
+      white-space: nowrap;
+    }
+
+    #error span {
+      display: inline-block;
+      animation: scrollError 8s linear infinite;
+    }
+
+    @keyframes scrollError {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .footer-marquee {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: #000;
+      color: #0ff;
+      font-weight: bold;
+      padding: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .footer-marquee span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollFooter 10s linear infinite;
+    }
+
+    @keyframes scrollFooter {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top runner text -->
+  <div class="runner">🚀 Skillmate.AI Login Portal 🚀</div>
+
+  <!-- Login Form Container -->
+  <div class="container">
+    <h2>Login to Skillmate.AI</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</butto

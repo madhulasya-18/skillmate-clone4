@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madhu Lasya Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000; /* Black background */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: #111;
+      padding: 20px 0;
+      box-shadow: 0 0 10px #00ffe1;
+    }
+
+    .marquee span {
+      display: inline-block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffe1;
+      animation: scroll-left 10s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .container {
+      padding: 40px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      max-width: 600px;
+      margin-top: 30px;
+    }
+
+    .container h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .container p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #00ffe1;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee">
+    <span>🌟 Welcome to Madhu Lasya Portal 🌟</span>
+  </div>
+
+  <div class="container">
+    <h1>Madhu Lasya Portal</h1>
+    <p>
+      Explore the world of Skillmate — where your skills meet real-world success.  
+      Learn, build, and grow with personalized mentorship and hands-on projects.
+    </p>
+
+    <a href="login.html" class="button">Go to Login</a>
+  </div>
+
+</body>
+</html>

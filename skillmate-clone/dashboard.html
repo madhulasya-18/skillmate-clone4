@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Skillmate.AI</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .logout-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #0ff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .user-info {
+      margin-top: 30px;
+      font-size: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Welcome to the Skillmate.AI Dashboard 🎉</h1>
+  <p class="user-info" id="userInfo">Loading user data...</p>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <script>
+    // --- JavaScript logic to control access and display user info ---
+
+    // Fetch login info from localStorage
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const username = localStorage.getItem("username");
+    const password = localStorage.getItem("password");
+
+    // Validate login status and credentials
+    if (
+      isLoggedIn === "true" &&
+      username === "madhu" &&
+      password === "madhu508"
+    ) {
+      // Display the username and password on the page
+      const userInfo = document.getElementById("userInfo");
+      userInfo.innerText = `👤 Username: ${username}\n🔒 Password: ${password}`;
+    } else {
+      // If invalid or missing info, redirect to login page
+      alert("Access denied. Please log in with valid credentials.");
+      window.location.href = "login.html";
+    }
+
+    // Logout function to clear storage and redirect
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      localStorage.removeItem("password");
+      alert("Logged out successfully.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
